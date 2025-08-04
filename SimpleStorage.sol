@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity  0.8.18; // Stating our version
+pragma solidity  ^0.8.24; // Stating our version
 
 contract SimpleStorage{
     // Basic Types: boolean, uint, int, address, bytes
@@ -17,7 +17,8 @@ contract SimpleStorage{
 
     Person[] public listOfPeople;
 
-    function store(uint256 _favoriteNumber) public {
+    //Virtuals makes a function overridable
+    function store(uint256 _favoriteNumber) virtual public {
         myFavoriteNumber = _favoriteNumber;
     }
 
